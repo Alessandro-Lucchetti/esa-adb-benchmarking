@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tsadbench"
+version = "1.0.0"
+description = "SMED and baselines for satellite-telemetry anomaly detection on the ESA Anomaly Detection Benchmark (ESA-ADB)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Alessandro Lucchetti" },
+    { name = "Lorenzo Brancato" },
+]
+keywords = ["anomaly detection", "time series", "satellite telemetry", "ESA-ADB", "matrix profile"]
+# Numeric stack pinned to the versions behind golden_checksums.json (see scripts/golden.py).
+dependencies = [
+    "numpy==2.2.6",
+    "numba==0.63.1",
+    "rocket-fft==0.3.1",
+    "pyarrow==23.0.0",
+    "pandas==2.3.3",
+    "scipy",
+    "scikit-learn",
+    "matplotlib",
+    "tqdm",
+    "portion",
+    "sortedcontainers",
+    "humanize",
+    "pydantic>=2",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+viz = ["seaborn", "screeninfo", "plotly", "dash", "dash-bootstrap-components", "absl-py"]
+dev = ["pytest"]
+taxonomy = ["hdbscan>=0.8.40"]   # class assignment of scripts/taxonomy.py
+
+[project.urls]
+Repository = "https://github.com/Alessandro-Lucchetti/esa-adb-benchmarking"
+"ESA-ADB dataset" = "https://doi.org/10.5281/zenodo.12528696"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "slow: long-running regression over all splits (deselect with '-m \"not slow\"')",
+]

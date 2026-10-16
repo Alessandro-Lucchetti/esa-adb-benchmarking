@@ -1,0 +1,12 @@
+# SMED detector defaults (the paper's canonical hyperparameters).
+# Experiment configs extend this and set mission / channels_mode / phase.
+algo_name: smed
+signal_mode: raw
+warm_up_mode: forward
+query_length: 100
+reference_length: 750
+slide_length: 5
+k: 1.5
+p: 0.1
+plot: false
+experimental_mode: false

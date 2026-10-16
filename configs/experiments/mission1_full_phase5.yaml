@@ -1,0 +1,6 @@
+# Paper main result: SMED on Mission 1, full target-channel set, Phase 5 (7y train / 7y test).
+_extends: ../base/smed.yaml
+mission: ESA-Mission1
+channels_mode: full
+phase: 5
+experimental_mode: true

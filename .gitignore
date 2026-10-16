@@ -1,0 +1,91 @@
+########################
+# 1. Project-specific   #
+# Write here path that need to be excluded from the version control
+# This means that if you create a file or folder, and you add its path here,
+# it wont be affected by 'git add' command, for example
+# The .gitignore file is shared, any change here is reflected for everyone
+# GitHub sets a maximum file size of 50 MB
+########################
+
+# Excluding databases
+**.zip
+# Q-GPR predictions of the paper (1 MB, built by tools/release/build_qgpr_archive.py)
+!/results/qgpr_predictions.zip
+**.tar
+data/*
+!data/metadata.json
+# not part of ESA-ADB: reference tables of the archetype taxonomy (scripts/taxonomy.py)
+!data/ESA-Mission1/
+data/ESA-Mission1/*
+!data/ESA-Mission1/taxonomy/
+
+# Local notes
+/.notes/
+/_notes/
+
+# Smed
+/smed/experiments/**/*.parquet
+
+# Generated prediction artifacts (regenerable; label hashes tracked in golden_checksums.json)
+/smed/predictions/
+
+# Ingested ESA-ADB baseline predictions (regenerable from the published zips)
+/telemanom/predictions/
+
+# smed-benchmark / ool-benchmark: data is copied in by prepare_data.sh (regenerable); output is run results
+/smed-benchmark/data/
+/smed-benchmark/output/
+/ool-benchmark/data/
+/ool-benchmark/output/
+
+# Detector runs (run_detector outputs; regenerable)
+/runs/
+
+# Local run logs of the baseline sweeps
+/logs/
+
+########################
+# 2. Python artefacts   #
+########################
+**/__pycache__/
+*.py[cod]
+*.so
+*.dylib
+*.pyd
+build/
+dist/
+*.egg-info/
+.eggs/
+venv/
+.env/
+.venv/
+env/
+ENV/
+
+########################
+# 3. IDE & Editors      #
+########################
+.idea/
+.vscode/
+.spyderproject
+.spyproject
+.ipynb_checkpoints/
+
+########################
+# 4. OS / tooling junk  #
+########################
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*~
+.tmp.drivedownload/
+.tmp.driveupload/
+
+########################
+# 5. Secrets            #
+########################
+*.env
+*.key
+*.pem
+*.pfx

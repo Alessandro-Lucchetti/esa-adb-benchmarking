@@ -1,0 +1,13 @@
+algo,set,p_percentile,p_fraction,precision,recall,f0.5,alarming_precision,n_predicted_events
+oolimit,light,0.1,0.001,0.995,0.4,0.767,0.722,36
+oolimit,light,1.0,0.01,0.995,0.415,0.778,0.73,36
+oolimit,light,3.0,0.03,0.995,0.415,0.778,0.711,37
+oolimit,light,5.0,0.05,0.995,0.415,0.778,0.771,34
+oolimit,light,10.0,0.1,0.824,0.446,0.705,0.744,45
+oolimit,light,25.0,0.25,0.009,0.6,0.011,0.75,4083
+oolimit,full,0.1,0.001,0.991,0.385,0.754,0.897,35
+oolimit,full,1.0,0.01,0.009,0.923,0.011,0.198,4040
+oolimit,full,3.0,0.03,0.009,0.923,0.012,0.202,3959
+oolimit,full,5.0,0.05,0.009,0.923,0.011,0.211,3926
+oolimit,full,10.0,0.1,0.008,0.923,0.01,0.218,3647
+oolimit,full,25.0,0.25,0.002,0.978,0.003,0.304,2048

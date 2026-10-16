@@ -1,0 +1,57 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "esa-adb-benchmarking: SMED and baselines on the ESA Anomaly Detection Benchmark"
+type: software
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/Alessandro-Lucchetti/esa-adb-benchmarking"
+keywords:
+  - anomaly detection
+  - time series
+  - satellite telemetry
+  - ESA-ADB
+authors:
+  - family-names: Brancato
+    given-names: Lorenzo
+    affiliation: Politecnico di Milano
+  - family-names: Lucchetti
+    given-names: Alessandro
+    affiliation: Politecnico di Milano
+  - family-names: Kimura
+    given-names: Yu
+    affiliation: JAXA
+  - family-names: Omata
+    given-names: Noriyasu
+    affiliation: JAXA
+  - family-names: Giglio
+    given-names: Marco
+    affiliation: Politecnico di Milano
+  - family-names: Tsutsumi
+    given-names: Seiji
+    affiliation: JAXA
+  - family-names: Cadini
+    given-names: Francesco
+    affiliation: Politecnico di Milano
+preferred-citation:
+  type: article
+  title: "Evaluating scalable similarity search and gaussian process regression for satellite telemetry anomaly detection on the ESA-ADB benchmark"
+  journal: "Aerospace Science and Technology"
+  volume: 180
+  start: 113957
+  year: 2027
+  doi: "10.1016/j.ast.2026.113957"
+  authors:
+    - family-names: Brancato
+      given-names: Lorenzo
+    - family-names: Lucchetti
+      given-names: Alessandro
+    - family-names: Kimura
+      given-names: Yu
+    - family-names: Omata
+      given-names: Noriyasu
+    - family-names: Giglio
+      given-names: Marco
+    - family-names: Tsutsumi
+      given-names: Seiji
+    - family-names: Cadini
+      given-names: Francesco

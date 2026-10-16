@@ -1,0 +1,452 @@
+{
+  "versions": {
+    "numpy": "2.2.6",
+    "numba": "0.63.1",
+    "rocket_fft": "0.3.1",
+    "pandas": "2.3.3",
+    "pyarrow": "23.0.0"
+  },
+  "description": "SMED bit-exact label regression baseline (ESA-Mission1 raw). light=phases1-5, full=phase5. mass() accumulates in float64 -> numerically exact and reproducible across OS / numpy / numba / rocket_fft (verified: channel_66=449 on rocket_fft 0.2.5 and 0.3.1, Linux and Windows). Do NOT downgrade mass() dtypes to float32 (a float32 mass() gave platform-dependent labels: channel_66 226 vs 399). Per-class recall on the full set = 125/328 (matches the paper).",
+  "checksums": {
+    "smed_ESA-Mission1_phase_1_raw_light_q100_r750_s5_k1.5_p0.1/channel_41": {
+      "sha256": "cec157276287c51da548f9f5da410f66761a584ea0ba62f3b21a562701a418e5",
+      "anomalies": 2879,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_1_raw_light_q100_r750_s5_k1.5_p0.1/channel_42": {
+      "sha256": "3878921723061c48848688cfd97b9ad4ed6e31d7c048b13272996063de943403",
+      "anomalies": 2686,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_1_raw_light_q100_r750_s5_k1.5_p0.1/channel_43": {
+      "sha256": "071e11c9f3727a0fa6540c137c52cfd7498d6581a997ef7b56b885394d1f4d20",
+      "anomalies": 2936,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_1_raw_light_q100_r750_s5_k1.5_p0.1/channel_44": {
+      "sha256": "5f6fe28e3df6e234d2f17ae6fff0cb407df311c20361aad04c0be026e4138212",
+      "anomalies": 2833,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_1_raw_light_q100_r750_s5_k1.5_p0.1/channel_45": {
+      "sha256": "5452882435e442363523d3207da0e84f652abc5d534d62d14adf55c357dea4b1",
+      "anomalies": 3015,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_1_raw_light_q100_r750_s5_k1.5_p0.1/channel_46": {
+      "sha256": "b865d02335cd81953ed8303fa913ddbff14b8d2e04b84b637a93a8469ec93cef",
+      "anomalies": 2823,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_2_raw_light_q100_r750_s5_k1.5_p0.1/channel_41": {
+      "sha256": "7aa39107931918208546935f571b0793211ec75557383f4b7b9466abad869835",
+      "anomalies": 2630,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_2_raw_light_q100_r750_s5_k1.5_p0.1/channel_42": {
+      "sha256": "46252f1893862499df57621b09ba71cfd76c3478188113bf1d2f5c31c16b8a71",
+      "anomalies": 2677,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_2_raw_light_q100_r750_s5_k1.5_p0.1/channel_43": {
+      "sha256": "1106d9f034539687b559db5f5d13fc64607c2a4a56c44d53f64b2d16f5e6f41d",
+      "anomalies": 2764,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_2_raw_light_q100_r750_s5_k1.5_p0.1/channel_44": {
+      "sha256": "f7ebc3670f5db59344d54d7632073e39b02d0b00753af119f018943bd632c941",
+      "anomalies": 2615,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_2_raw_light_q100_r750_s5_k1.5_p0.1/channel_45": {
+      "sha256": "22b1c0e5b918c2b9413b0d481a97b1b994c6aac8ebe6a7f608f1e5e66c366b75",
+      "anomalies": 2840,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_2_raw_light_q100_r750_s5_k1.5_p0.1/channel_46": {
+      "sha256": "09d41f30d0f33d1d43a007eb484cd74f71e4ee9084b54272953383f3bd498aab",
+      "anomalies": 2690,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_3_raw_light_q100_r750_s5_k1.5_p0.1/channel_41": {
+      "sha256": "5e5b3f335a8e6352c84d3c15611ab60200409fc27d71a6bc8791fffcd2c57383",
+      "anomalies": 2673,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_3_raw_light_q100_r750_s5_k1.5_p0.1/channel_42": {
+      "sha256": "d228912afa4f12094bb269347427e964458c9e56b47462c2938c124ccb6a0b98",
+      "anomalies": 2709,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_3_raw_light_q100_r750_s5_k1.5_p0.1/channel_43": {
+      "sha256": "98e43934dcd130462173fd663e1e470f62ddb369ae1cc343a46a5ad7f3834bb2",
+      "anomalies": 2826,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_3_raw_light_q100_r750_s5_k1.5_p0.1/channel_44": {
+      "sha256": "47cbf8d19448005ed5c41ae9d129bf6b2fb66b503306a0b9b371302fd064ba92",
+      "anomalies": 2624,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_3_raw_light_q100_r750_s5_k1.5_p0.1/channel_45": {
+      "sha256": "2c0a2aee05fd1b10ece39c1460116659256dc6e16be4753a77de90eaf6d3af63",
+      "anomalies": 2841,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_3_raw_light_q100_r750_s5_k1.5_p0.1/channel_46": {
+      "sha256": "d4298ea0a72b5330c14e01c43231d162a6c0ddcb29de67f1855ce4563242bb61",
+      "anomalies": 2701,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_4_raw_light_q100_r750_s5_k1.5_p0.1/channel_41": {
+      "sha256": "6fc024c7fe674d1ad8a3f81c866c08426c84d07e7d13e7652a6bbbc2853b79e3",
+      "anomalies": 2707,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_4_raw_light_q100_r750_s5_k1.5_p0.1/channel_42": {
+      "sha256": "3179914051c80419b59da0b257fde3563ff3435a760a6cdb5645b0a2da2d3a8d",
+      "anomalies": 2565,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_4_raw_light_q100_r750_s5_k1.5_p0.1/channel_43": {
+      "sha256": "3dee3aa3a0638301683e0eef97863065f1511113293c3bcfdea0343624c972d9",
+      "anomalies": 2745,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_4_raw_light_q100_r750_s5_k1.5_p0.1/channel_44": {
+      "sha256": "afb633c5ac5e5d1dca578bd834fe6244a1ec45b3ef1b742932fcb2ddac706037",
+      "anomalies": 2688,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_4_raw_light_q100_r750_s5_k1.5_p0.1/channel_45": {
+      "sha256": "6a56f15aa9ebdb5701027f18e5476d062cd636fcd2ca30ac4cc28db014e13805",
+      "anomalies": 2619,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_4_raw_light_q100_r750_s5_k1.5_p0.1/channel_46": {
+      "sha256": "3829521040c69322f52bb616b4e59c3a9dfa220b57a7de8f79e99422bfeafcb9",
+      "anomalies": 2665,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_12": {
+      "sha256": "2da8e68bd3e682a168ecfd57ec5a37cb6e06e55415c815cb54033c282d97c9ef",
+      "anomalies": 275,
+      "length": 2320028
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_13": {
+      "sha256": "22316a88c5e34535df328d5c1a3024a4a46b6de91bd947660d0b63309b7ebda6",
+      "anomalies": 252,
+      "length": 2320028
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_14": {
+      "sha256": "fe3398324c378b313f2a4eeb6cb10144747c29ca0eb0d53c92cc9cb9ba7bb6a4",
+      "anomalies": 1257,
+      "length": 522905
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_15": {
+      "sha256": "c73f923d58c10eb5a201423a091b4ff34a90863567a6be8347ba2b39a6922fd9",
+      "anomalies": 1657,
+      "length": 522905
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_16": {
+      "sha256": "47a744d8b78424326cbb18963436ac73a8296e43dcf2220fa6d576d16610ba8a",
+      "anomalies": 947,
+      "length": 522905
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_17": {
+      "sha256": "3206a43e6b08a6b972748e7e854911042429a04166e772558c9fdb6d5caa6056",
+      "anomalies": 306,
+      "length": 2320028
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_18": {
+      "sha256": "6f00176866e1b360422c2d67b2e10376a5c13b5d25cbcb60efb6b6c067e68135",
+      "anomalies": 221,
+      "length": 2320028
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_19": {
+      "sha256": "656aad03cc4f92f2cacaa7518adf330ef7fe1964227e984618353dbe38f3cf47",
+      "anomalies": 225,
+      "length": 2320028
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_20": {
+      "sha256": "4f7171c88d3151aafcc30a7796f3cecf7e8b75e4a8b1bcc1e485715138fd7fe7",
+      "anomalies": 259,
+      "length": 2320028
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_21": {
+      "sha256": "0776f12b4eff43e068a4f2ea008f71b2c0f9c4202e1f3bb65188fdd3cf6a1652",
+      "anomalies": 1234,
+      "length": 522905
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_22": {
+      "sha256": "c57545ff4c7d8cb053e01a3a36e260bd1ab85245f39a73842fce95af48eb7f18",
+      "anomalies": 1422,
+      "length": 522905
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_23": {
+      "sha256": "c61151a2811b30310b65d7cc2c566fb1e7aa01c8a257c7a713bbde9dcda580bb",
+      "anomalies": 1607,
+      "length": 522905
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_24": {
+      "sha256": "a7dd15c11c86ebff375f4e680867d84d655cd005de79405b6f96d4c88a23acd3",
+      "anomalies": 931,
+      "length": 522905
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_25": {
+      "sha256": "5a7f2bb3fae7cf117cd4ac8e0f10d565a6f3d0da04e690448daa2950748c6ede",
+      "anomalies": 226,
+      "length": 2320028
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_26": {
+      "sha256": "c59ce7c7bd16d0e2eded51549080e70ece9c38fda909cccff5b1164cdb4b846b",
+      "anomalies": 204,
+      "length": 2320028
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_27": {
+      "sha256": "de0745682d6f00e7b3b548ea641717f038bd69e75623026a5a88d4fd72e0568f",
+      "anomalies": 287,
+      "length": 2320028
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_28": {
+      "sha256": "a1de971f1bcc1a6fbe60538aed07e9b044dadc059f62b5765aa50798df20caae",
+      "anomalies": 254,
+      "length": 2320028
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_29": {
+      "sha256": "970c94dba6fd6de781742b526653461e92cdd0fe5ef63b5b17dc58b2a30759b2",
+      "anomalies": 991,
+      "length": 522905
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_30": {
+      "sha256": "5da3a2ad0c94f3884e11664d55586884720940c481c58c28fe2cfb1eefed5bdd",
+      "anomalies": 667,
+      "length": 522905
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_31": {
+      "sha256": "bbc4c833740cf6092c7ab1f5230ebc75189c6d3bbb2d5e6985457474c69d9940",
+      "anomalies": 1372,
+      "length": 522905
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_32": {
+      "sha256": "b8e9b41a3ed4de6b3be9389950dae7d5c70458233c67f1ad23e164716bd27e92",
+      "anomalies": 951,
+      "length": 522905
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_33": {
+      "sha256": "e5b93875c6a4a447e5b1d9b130d9bb591a36f2dbcc2777d11a95bbc15e3c25c4",
+      "anomalies": 945,
+      "length": 522905
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_34": {
+      "sha256": "98e981e14c498abb7e1b0aa9e232147207f8b26933e57036296e7ce280e90d30",
+      "anomalies": 329,
+      "length": 2320028
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_35": {
+      "sha256": "f11dc4de1e4a36f4ad13a9d4f66a87b3f17f2c3d8af1f0beb291fda459453556",
+      "anomalies": 214,
+      "length": 2320028
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_36": {
+      "sha256": "6bfbe5e507b26c0b222bb08c95572bc1820447c366d3cafa49024a555514e4d0",
+      "anomalies": 250,
+      "length": 2320028
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_37": {
+      "sha256": "faeb412827999529219e3452d983442528f8be113cdd70890e0a3a15879eef03",
+      "anomalies": 264,
+      "length": 2320028
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_38": {
+      "sha256": "1e7d35cddca68e4b8e5b42a8c6f8c6434cd9577ab1c962589aa1efe0d41245bc",
+      "anomalies": 582,
+      "length": 522905
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_39": {
+      "sha256": "819708280a77c8c1864fc601f9d8385dc8e607696357cfb76bb9cb117c81850a",
+      "anomalies": 1356,
+      "length": 522905
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_40": {
+      "sha256": "e20c8894541d00577e06b9394a4f02d3091c77ff8e0eb0b8b8c3a0c21aa08be3",
+      "anomalies": 948,
+      "length": 522905
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_41": {
+      "sha256": "4d6be99c2a4d1755be98d7600eb8b536b9c92a42c0509ada489b40f33614e518",
+      "anomalies": 2670,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_42": {
+      "sha256": "8ec5e25a0efbec1b00435bdce83172916bd3cc644e6d6b23135e04f235e59947",
+      "anomalies": 2525,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_43": {
+      "sha256": "9487fe2c6573484d7c453a2261439d9b618d38748d6be2c721e94afcd4923053",
+      "anomalies": 2725,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_44": {
+      "sha256": "172446012b9ed2b0d17d05749990a453bccc10490c6d66a19f7dfec972dbc0d6",
+      "anomalies": 2653,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_45": {
+      "sha256": "5c651fc7da80334f7bd3164137bd433966a9cf287922d5cf05dc23ccb4bffaa1",
+      "anomalies": 2594,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_46": {
+      "sha256": "78d38e4505ea8e4fa10aac000d59aebc98c532932e6948c3dab8c033b815b140",
+      "anomalies": 2615,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_47": {
+      "sha256": "2d0de1f870b18c55a98e618e7f478cdc084b2b22d07598f81d3b6836919350c7",
+      "anomalies": 1572,
+      "length": 1458588
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_48": {
+      "sha256": "263d7dee4f853002f3d5db7f5bb8aa25346a0b45cdd62e88f2fff1aebc9219f1",
+      "anomalies": 1816,
+      "length": 1458588
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_49": {
+      "sha256": "22275a0b86adc6d6d417a57d51c3e3dee0cdb893931251e80d889f8947df11ff",
+      "anomalies": 1896,
+      "length": 1458588
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_50": {
+      "sha256": "f81a4518e1915cff321664fefcf7f969f3e4f705d7ffe9e13dfb596243e1b5a8",
+      "anomalies": 1722,
+      "length": 487667
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_51": {
+      "sha256": "0fe0dc3aab23df87c1a3fb203c77520ba287b5dc3591960e911db0dc1305a302",
+      "anomalies": 2024,
+      "length": 487667
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_52": {
+      "sha256": "0f2513431bc1cefd80e7a60906c11a6fdebbac5ba704d854bae7d59b0af6f836",
+      "anomalies": 2065,
+      "length": 487667
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_57": {
+      "sha256": "4ffeb8dffd767ea4298c3a70f059eb227d62534cfcb1e14ca6a5cda77759764a",
+      "anomalies": 1833,
+      "length": 1457343
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_58": {
+      "sha256": "1d79f9b2d58a8f1410334e0ff24204e102a89edab5241e531b24a3a8a90ce506",
+      "anomalies": 1795,
+      "length": 1457343
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_59": {
+      "sha256": "4d9840b5092d658d86e4810af881e153c31f4dc0728b468bfff0f8dcb6d2db50",
+      "anomalies": 1904,
+      "length": 1457343
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_60": {
+      "sha256": "6274f52e526a691976d4cb4735c59dda93c58d8ea78f61378b51166b8d8b4a27",
+      "anomalies": 1717,
+      "length": 1457343
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_61": {
+      "sha256": "d9c1dded09960547ff05f4080a0a21f2ab6c714d38f519abb1d4567fa3963abd",
+      "anomalies": 56,
+      "length": 48329
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_62": {
+      "sha256": "ac6cba6c877b7c1b83ac0618ea7fd51b7e4f0452bffe91aaa64bc30f0acc4f44",
+      "anomalies": 27,
+      "length": 48329
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_63": {
+      "sha256": "ac49362e319a0090f015183ef54f0b1b48adbaa86a701991baca78288351b005",
+      "anomalies": 28,
+      "length": 48329
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_64": {
+      "sha256": "abc3d306dfe4235a78d652fd592043923e09c913021410bda26cfcae19cd2a7a",
+      "anomalies": 153,
+      "length": 245016
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_65": {
+      "sha256": "215348ad731987e11732cd9be1ed0f396cf483fed2527d259431ae1205144b9a",
+      "anomalies": 152,
+      "length": 245016
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_66": {
+      "sha256": "f666375d687819c00f1ea46325e80aa2a74f56579a2612ee57a0d0fdeaf0b010",
+      "anomalies": 449,
+      "length": 245016
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_70": {
+      "sha256": "4b9e872fd7e213f1213c980d537cf67a14c23e9d43f83cdc891128fec83bfbda",
+      "anomalies": 209,
+      "length": 1463229
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_71": {
+      "sha256": "5dc9b316ce63ba3522fbd7c389f899156d768fa6ddaa91b82af36b2b7128ec71",
+      "anomalies": 203,
+      "length": 1462806
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_72": {
+      "sha256": "b02f5003f99d9a95caa2176170768daf9d5079c3c283efe1342b7ee57debe16e",
+      "anomalies": 178,
+      "length": 1463062
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_73": {
+      "sha256": "700768861d1bd47473607e66d120679a1e0ce57cd6b889047f5a6140240f6132",
+      "anomalies": 194,
+      "length": 1463060
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_74": {
+      "sha256": "16d92ba910be649e805ab3049791b419be177ce634b17fd5154a29cb8aadc30b",
+      "anomalies": 216,
+      "length": 1462804
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_75": {
+      "sha256": "08c157be0b56a07b8706a850336d4df3fea35bf2d4bea572e6115670c0fddba5",
+      "anomalies": 221,
+      "length": 1462804
+    },
+    "smed_ESA-Mission1_phase_5_raw_full_q100_r750_s5_k1.5_p0.1/channel_76": {
+      "sha256": "e07b4a543e2b9e618a7b42f56414ab7e60607ca39920498d9aa29c2dea8e4db3",
+      "anomalies": 342,
+      "length": 1463551
+    },
+    "smed_ESA-Mission1_phase_5_raw_light_q100_r750_s5_k1.5_p0.1/channel_41": {
+      "sha256": "4d6be99c2a4d1755be98d7600eb8b536b9c92a42c0509ada489b40f33614e518",
+      "anomalies": 2670,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_5_raw_light_q100_r750_s5_k1.5_p0.1/channel_42": {
+      "sha256": "8ec5e25a0efbec1b00435bdce83172916bd3cc644e6d6b23135e04f235e59947",
+      "anomalies": 2525,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_5_raw_light_q100_r750_s5_k1.5_p0.1/channel_43": {
+      "sha256": "9487fe2c6573484d7c453a2261439d9b618d38748d6be2c721e94afcd4923053",
+      "anomalies": 2725,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_5_raw_light_q100_r750_s5_k1.5_p0.1/channel_44": {
+      "sha256": "172446012b9ed2b0d17d05749990a453bccc10490c6d66a19f7dfec972dbc0d6",
+      "anomalies": 2653,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_5_raw_light_q100_r750_s5_k1.5_p0.1/channel_45": {
+      "sha256": "5c651fc7da80334f7bd3164137bd433966a9cf287922d5cf05dc23ccb4bffaa1",
+      "anomalies": 2594,
+      "length": 1532227
+    },
+    "smed_ESA-Mission1_phase_5_raw_light_q100_r750_s5_k1.5_p0.1/channel_46": {
+      "sha256": "78d38e4505ea8e4fa10aac000d59aebc98c532932e6948c3dab8c033b815b140",
+      "anomalies": 2615,
+      "length": 1532227
+    }
+  }
+}

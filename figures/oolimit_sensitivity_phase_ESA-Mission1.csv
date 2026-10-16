@@ -1,0 +1,6 @@
+phase,training_length,validation_length,smed,qgpr,telemanom_esa_pruned,ool_light,ool_full
+Phase 1,9 weeks,3 weeks,0.724,0.302,0.227,0.778,0.0
+Phase 2,8 months,2 months,0.786,0.767,0.311,0.778,0.019
+Phase 3,18 months,3 months,0.786,0.856,0.776,0.767,0.036
+Phase 4,39 months,3 months,0.803,0.883,0.776,0.767,0.565
+Phase 5,81 months,3 months,0.811,0.898,0.786,0.767,0.754

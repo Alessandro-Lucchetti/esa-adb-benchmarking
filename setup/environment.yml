@@ -1,0 +1,10 @@
+name: tsadbench
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - setuptools>=64
+  - wheel
+  # Runtime deps (incl. the bit-exact-pinned numeric stack) come from pyproject.toml
+  # via `pip install -e .` (see the Makefile `env` target / setup_env scripts).

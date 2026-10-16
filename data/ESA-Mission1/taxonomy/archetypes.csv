@@ -1,0 +1,9 @@
+archetype_id,archetype,code_first,code_last,n_units,n_classes,n_rule_based,n_windows,n_events,n_groups,pct_anomaly,pct_rare,pct_gap
+A1,sustained excursion,C1,C48,48,48,0,1303,124,11,47.4,50.1,2.5
+A2,short deviation,C49,C78,30,30,0,939,111,9,20.1,73.7,6.2
+A3,point-like,C79,C83,5,2,3,535,66,3,34.6,55.7,9.7
+A4,silence,C84,C84,1,0,1,187,38,1,35.3,64.7,0.0
+A5,regime switch,C85,C97,13,13,0,144,7,5,13.9,86.1,0.0
+A6,quiet interval,C98,C108,11,11,0,102,14,6,2.0,73.5,24.5
+A7,pure rate change,C109,C113,5,5,0,58,5,3,0.0,100.0,0.0
+A8,frozen collapse,C114,C117,4,4,0,45,34,1,66.7,33.3,0.0

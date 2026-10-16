@@ -1,0 +1,37 @@
+{
+  "ESA-Mission1": {
+    "light": ["channel_41", "channel_42", "channel_43", "channel_44", "channel_45", "channel_46"],
+    "full": [
+      "channel_12", "channel_13", "channel_14", "channel_15", "channel_16", "channel_17",
+      "channel_18", "channel_19", "channel_20", "channel_21", "channel_22", "channel_23",
+      "channel_24", "channel_25", "channel_26", "channel_27", "channel_28", "channel_29",
+      "channel_30", "channel_31", "channel_32", "channel_33", "channel_34", "channel_35",
+      "channel_36", "channel_37", "channel_38", "channel_39", "channel_40", "channel_41",
+      "channel_42", "channel_43", "channel_44", "channel_45", "channel_46", "channel_47",
+      "channel_48", "channel_49", "channel_50", "channel_51", "channel_52", "channel_57",
+      "channel_58", "channel_59", "channel_60", "channel_61", "channel_62", "channel_63",
+      "channel_64", "channel_65", "channel_66", "channel_70", "channel_71", "channel_72",
+      "channel_73", "channel_74", "channel_75", "channel_76"
+    ],
+    "train_durations": [3, 10, 21, 42, 84],
+    "test_duration": 84,
+    "test_period": ["2007-01-01 00:00:00", "2014-01-01 00:00:00"]
+  },
+  "ESA-Mission2": {
+    "light": ["channel_18", "channel_19", "channel_20", "channel_21", "channel_22", "channel_23",
+                    "channel_24", "channel_25", "channel_26", "channel_27", "channel_28"],
+    "full": [
+      "channel_9", "channel_10", "channel_11", "channel_12", "channel_13", "channel_14",
+      "channel_15", "channel_16", "channel_17", "channel_18", "channel_19", "channel_20",
+      "channel_21", "channel_22", "channel_23", "channel_24", "channel_25", "channel_26",
+      "channel_27", "channel_28", "channel_58", "channel_59", "channel_70", "channel_71",
+      "channel_72", "channel_73", "channel_74", "channel_75", "channel_76", "channel_77",
+      "channel_78", "channel_79", "channel_80", "channel_81", "channel_82", "channel_83",
+      "channel_84", "channel_85", "channel_86", "channel_87", "channel_88", "channel_89",
+      "channel_90", "channel_91", "channel_96", "channel_97", "channel_98"
+    ],
+    "train_durations": [1, 5, 10, 21],
+    "test_duration": 21,
+    "test_period": ["2001-10-01 00:00:00", "2003-07-01 00:00:00"]
+  }
+}
